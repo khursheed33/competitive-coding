@@ -1,3 +1,34 @@
+/* 
+consider two arrays a and b where each consists of n integers. In one operation:
+1. select two indices i and j (0<i, j<n)
+2. Swap integers a[i] and b[j]
+
+This operation can be performed at most k times.
+
+Find the maximum number of distinct elements that can be achieved in array a after at most k operations.
+
+Example:
+n=5
+a=[2,3,3,2,2]
+b=[1,3,2,4,1]
+k=2
+
+To get the maximum number of distinct elements in array a:
+select i=2, j=0. swap a[2] and b[0] Now, a = [2,3,1,2,2]
+select i=4, j=3. swap a[4] and b[3], Finally, a= [2,3,1,2,4] and b = [3,3,2,2,1]
+
+Function Description:
+getMaximumDistinct has following parameters:
+ int a[n]
+ int b[n]
+ int k
+
+*/
+
+
+
+
+
 function getMaximumDistinct(a, b, k) {
     const n = a.length;
     const c = getCommonElements(a, b);
